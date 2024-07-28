@@ -25,7 +25,7 @@
     # obsidian
 
     # IDE
-    vscode
+    # vscode
     # insomnia
 
     # cloud native
@@ -49,6 +49,11 @@
       clock24 = true;
       keyMode = "vi";
       extraConfig = "mouse on";
+    };
+
+    vscode = {
+      enable = true;
+      package = pkgs.vscode.fhs;
     };
 
     # bat = {

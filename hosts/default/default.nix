@@ -5,7 +5,8 @@
     [
       ../../modules/system.nix
       # ../../modules/i3.nix
-      ../../modules/gnome-hyprland.nix
+      # ../../modules/gnome-hyprland.nix
+      ../../modules/wayland-gnome.nix
       # ../../modules/hyprland.nix
 
       # Include the results of the hardware scan.

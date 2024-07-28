@@ -9,18 +9,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-    helix.url = "github:helix-editor/helix/master";
+    # hyprland.url = "github:hyprwm/Hyprland";
+    # helix.url = "github:helix-editor/helix/master";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, hyprland, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         # pkgs = nixpkgs.legacyPackages.${system};
         specialArgs = { inherit inputs; };
         modules = [
-          # ./hosts/default/configuration.nix
           ./hosts/default
 
           home-manager.nixosModules.home-manager
@@ -33,6 +32,5 @@
         ];
       };
     };
-
   };
 }
